@@ -1,22 +1,27 @@
 #!/bin/bash
 
-echo Hello, where should files be copied?
-read dir
-
-if [ -d $dir ]
-then
-    echo Directory $dir exists.
-    for f in .*
-    do
-        ln -sf $f $dir/$f
-    done
-    for f in .git
-    do
-        rm -r $dir/.git
-        rm $dir/.gitignore
-    done
-else
-    echo Directory $dir does not exist.
-    exit 9999
+if [ "$#" -ne 1 ]; then
+    echo "Usage: install.sh <home_directory>"
+    exit 1
 fi
+
+homedir=$1
+
+# dotfiles directory
+dotfiledir=${homedir}/dotfiles
+
+# list of files/folders to symlink in ${homedir}
+files="bash_profile bashrc bash_prompt aliases private"
+
+# change to the dotfiles directory
+echo "Changing to the ${dotfiledir} directory"
+cd ${dotfiledir}
+echo "...done"
+
+# create symlinks (will overwrite old dotfiles)
+for file in ${files}; do
+    echo "Creating symlink to $file in home directory."
+    ln -sf ${dotfiledir}/.${file} ${homedir}/.${file}
+done
+
 
