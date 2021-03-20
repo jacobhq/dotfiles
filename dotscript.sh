@@ -8,10 +8,10 @@ fi
 homedir=$1
 
 # dotfiles directory
-dotfiledir=${homedir}/dotfiles
+dotfiledir=${homedir}/.dotfiles/debian_10_wsl
 
 # list of files/folders to symlink in ${homedir}
-files="bash_profile bashrc bash_prompt aliases private"
+files="bash_profile bashrc bash_prompt aliases zshrc zshrc.pre-oh-my-zsh zprofile shell.pre-oh-my-zsh"
 
 # change to the dotfiles directory
 echo "Changing to the ${dotfiledir} directory"
