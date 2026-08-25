@@ -1,0 +1,14 @@
+# Bind Ctrl + Left Arrow to move back one word
+bindkey "^[[1;5D" backward-word
+
+# Bind Ctrl + Right Arrow to move forward one word
+bindkey "^[[1;5C" forward-word
+
+HISTFILE=~/.zsh_history
+
+HISTSIZE=5000
+SAVEHIST=5000
+
+setopt SHARE_HISTORY
+
+eval "$(starship init zsh)"
