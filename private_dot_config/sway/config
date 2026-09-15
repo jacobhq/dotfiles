@@ -234,6 +234,13 @@ bar {
     }
 }
 
+
+# Clamshell mode configuration
+bindswitch lid:on output eDP-1 disable
+bindswitch lid:off output eDP-1 enable
+
 include /etc/sway/config.d/*
 include ~/.config/sway/config.local
+
+input * { xkb_layout "gb" }
 
