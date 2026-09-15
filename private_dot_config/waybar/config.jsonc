@@ -41,11 +41,23 @@
 
   "network": {
     "format-wifi": "󰤨",
-    "format-ethernet": "󰈀",
+    "format-ethernet": "󰈁",
     "format-disconnected": "󰤭",
     "tooltip-format-wifi": "{essid} ({signalStrength}%)",
     "tooltip-format-ethernet": "{ifname}",
     "tooltip-format-disconnected": "Disconnected"
+  },
+
+  "power-profiles-daemon": {
+      "format": "{icon}",
+      "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+      "tooltip": true,
+      "format-icons": {
+          "default": "󰓅",
+          "performance": "󰓅",
+          "balanced": "󰾅",
+          "power-saver": "󰾆"
+      }
   },
 
   "battery": {
