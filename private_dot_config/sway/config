@@ -234,13 +234,19 @@ bar {
     }
 }
 
+include /etc/sway/config.d/*
+# START OF MY STUFF :)
 
 # Clamshell mode configuration
 bindswitch lid:on output eDP-1 disable
 bindswitch lid:off output eDP-1 enable
 
-include /etc/sway/config.d/*
-include ~/.config/sway/config.local
+# Hide writing
+default_border pixel 2
+default_floating_border pixel 2
 
+# Keyboard layout
 input * { xkb_layout "gb" }
 
+# Local overrides like monitors etc
+include ~/.config/sway/config.local
