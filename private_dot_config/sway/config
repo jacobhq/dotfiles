@@ -251,5 +251,8 @@ input * { xkb_layout "gb" }
 # Swaybar
 bar swaybar_command waybar
 
+# Swaylock
+bindsym $mod+Ctrl+l exec swaylock --color 000000
+
 # Local overrides like monitors etc
 include ~/.config/sway/config.local
