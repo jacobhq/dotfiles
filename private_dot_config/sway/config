@@ -257,5 +257,10 @@ bindsym $mod+Ctrl+l exec swaylock --color 000000
 # nightlight
 exec_always wlsunset -T 6500 -t 3500 -l 51.349445 -L -0.270786
 
+input type:touchpad {
+    natural_scroll enabled
+    tap enabled
+}
+
 # Local overrides like monitors etc
 include ~/.config/sway/config.local
