@@ -263,5 +263,9 @@ input type:touchpad {
     tap enabled
 }
 
+input type:keyboard {
+    xkb_layout gb
+}
+
 # Local overrides like monitors etc
 include ~/.config/sway/config.local
