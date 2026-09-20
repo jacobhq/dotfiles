@@ -267,5 +267,9 @@ input type:keyboard {
     xkb_layout gb
 }
 
+gaps inner 8
+
+output * bg ~/w.jpg fill
+
 # Local overrides like monitors etc
 include ~/.config/sway/config.local
